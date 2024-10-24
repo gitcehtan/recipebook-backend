@@ -25,7 +25,8 @@ const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         /* ../frontend/public/uploads */
         /* ./public/data/uploads/ */ 
-        cb(null, '../frontend/public/uploads');
+        // cb(null, '../frontend/public/uploads');  dev environment
+        cb(null, './public/uploads');
     },
     filename: (req, file, cb) => {
         const uniqueSuffix = Date.now();
